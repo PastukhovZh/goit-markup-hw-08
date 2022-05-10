@@ -2,6 +2,7 @@
 @import "./base/reset";
 @import "./utils/hidden";
 @import "./utils/vars";
+@import "./utils/mixins";
 ///////////////////////////
 @import "./components/container";
 @import "./components/logo";
@@ -15,4 +16,4 @@
 @import "./layout/team";
 @import "./layout/clients";
 @import "./layout/footer";
-@import "./layout/portfolio"
+@import "./layout/portfolio";
