@@ -401,31 +401,45 @@ input, textarea {
 }
 
 .hero {
-  max-width: 1600px;
+  min-width: 480px;
   background-color: #2f303a;
-  padding: 200px 0;
+  padding: 118px 0;
   margin: 0 auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.hero-list {
-  text-align: center;
+@media screen and (min-width: 768px) {
+  .hero {
+    min-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    padding: 200px 0;
+  }
 }
 
 .hero-title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--third-basic-color);
   margin-bottom: var(--typical-gap);
   padding: 0;
-  max-width: 696px;
+  max-width: 360px;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }
 
 .hero-items {
@@ -451,11 +465,21 @@ input, textarea {
 .text {
   padding: 60px 0;
 }
+@media screen and (min-width: 1200px) {
+  .text {
+    padding: 94px 0;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .text-list {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .text-list {
+    display: flex;
   }
 }
 
@@ -473,22 +497,42 @@ input, textarea {
 @media screen and (min-width: 768px) {
   .icon-list {
     width: 354px;
-    height: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .icon-list {
+    width: 270px;
   }
 }
 
 .text-li {
   display: block;
 }
-.text-li:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .text-li:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .text-li {
     width: calc(50% - 30px);
+    width: 354px;
   }
-  .text-li:nth-child(odd) {
-    margin-right: 30px;
+  .text-li:nth-child(even) {
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .text-li:nth-child(-n+2) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .text-li {
+    max-width: 270px;
+  }
+  .text-li + .text-li {
+    margin-left: var(--typical-gap);
   }
 }
 
@@ -576,8 +620,7 @@ input, textarea {
 }
 @media screen and (min-width: 1200px) {
   .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 94px 0;
   }
 }
 
@@ -720,47 +763,75 @@ input, textarea {
 }
 
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding: 94px 0;
+  }
 }
 
 .clients-title {
   font-weight: var(--basic-font-weight);
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--basic-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
 }
 
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -15px;
 }
 
 .clients-item {
-  border: 1px solid #AFB1B8;
-  max-width: 170px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  max-width: 210px;
   max-height: 92px;
+  margin: 15px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.clients-item + .clients-item {
-  margin-left: var(--typical-gap);
 }
 .clients-item:hover, .clients-item:focus {
   border-color: var(--second-basic-color);
 }
+@media screen and (min-width: 1200px) {
+  .clients-item {
+    max-width: 170px;
+  }
+}
 
 .clients-link {
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 768px) {
+  .clients-link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-link {
+    width: 170px;
+  }
+}
 
 .clients-icon {
-  fill: #AFB1B8;
+  fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-item:hover .clients-icon {

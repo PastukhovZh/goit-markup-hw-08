@@ -1,52 +1,75 @@
 .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+  padding: 60px 0;
+  @include desktop {
+    padding: 94px 0;
   }
-  
-  .clients-title {
-    font-weight: var(--basic-font-weight);
+}
+
+.clients-title {
+  font-weight: var(--basic-font-weight);
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--basic-color);
+  margin-bottom: 30px;
+  @include desktop {
     font-size: 36px;
     line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--basic-color);
     margin-bottom: 50px;
   }
-  
-  .clients-list {
-    display: flex;
-  }
-  
-  .clients-item {
-    border: 1px solid #AFB1B8;
-    max-width: 170px;
-    max-height: 92px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &+& {
-    margin-left: var(--typical-gap);
-    }
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -15px;
+}
+
+.clients-item {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  max-width: 210px;
+  max-height: 92px;
+  margin: 15px;
+  // flex-basis: calc((100% - 30px) / 3);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     border-color: var(--second-basic-color);
   }
+  @include mobile {
   }
-  
-  .clients-link {
-    display: flex;
+  @include tablet {
+    // max-width: 226px;
+  }
+  @include desktop {
+    max-width: 170px;
+    // & + & {
+    //   margin-left: var(--typical-gap);
+    // }
+  }
+}
+
+.clients-link {
+  display: flex;
+  width: 210px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+  @include tablet {
+    width: 226px;
+  }
+  @include desktop {
     width: 170px;
-    height: 92px;
-    align-items: center;
-    justify-content: center;
   }
-  
-  
-  
-  .clients-icon {
-    fill: #AFB1B8;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    .clients-item:hover & {
+}
+
+.clients-icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .clients-item:hover & {
     fill: var(--second-basic-color);
   }
-  }
-  
-  
+}

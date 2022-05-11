@@ -1,13 +1,17 @@
 .text {
-  // padding-top: 94px;
-  // padding-bottom: 94px;
   padding: 60px 0;
+  @include desktop {
+    padding: 94px 0;
+  }
 }
 
 .text-list {
   @include tablet {
     display: flex;
     flex-wrap: wrap;
+  }
+  @include desktop {
+    display: flex;
   }
 }
 
@@ -23,27 +27,37 @@
   justify-content: center;
   @include tablet {
     width: 354px;
-    height: 120px;
   }
-  // width: 270px;
+  @include desktop {
+    width: 270px;
+  }
 }
 
 .text-li {
   display: block;
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and(max-width:767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
   @include tablet {
     width: calc(100% / 2 - 30px);
-    &:nth-child(odd) {
-      margin-right: 30px;
+    width: 354px;
+    &:nth-child(even) {
+      margin-left: 30px;
+    }
+    @media screen and (max-width: 1199px) {
+      &:nth-child(-n + 2) {
+        margin-bottom: 30px;
+      }
     }
   }
-
-  // max-width: 270px;
-  // & + & {
-  //   margin-left: var(--typical-gap);
-  // }
+  @include desktop {
+    max-width: 270px;
+    & + & {
+      margin-left: var(--typical-gap);
+    }
+  }
 }
 
 .text-item-name {
