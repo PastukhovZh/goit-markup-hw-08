@@ -449,18 +449,20 @@ input, textarea {
 }
 
 .text {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
 }
 
-.text-list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .text-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .icon-list {
-  background-color: #F5F4FA;
+  background-color: #f5f4fa;
   display: flex;
-  width: 270px;
+  width: 450px;
   height: 120px;
   background-repeat: no-repeat;
   background-position: center;
@@ -468,13 +470,26 @@ input, textarea {
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 768px) {
+  .icon-list {
+    width: 354px;
+    height: 120px;
+  }
+}
 
 .text-li {
   display: block;
-  max-width: 270px;
 }
-.text-li + .text-li {
-  margin-left: var(--typical-gap);
+.text-li:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .text-li {
+    width: calc(50% - 30px);
+  }
+  .text-li:nth-child(odd) {
+    margin-right: 30px;
+  }
 }
 
 .text-item-name {
@@ -483,8 +498,23 @@ input, textarea {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
   padding: 0;
+}
+@media screen and (min-width: 480px) {
+  .text-item-name {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 479px) {
+  .text-item-name {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .text-item-name {
+    text-align: start;
+  }
 }
 
 .text-item {
@@ -497,6 +527,11 @@ input, textarea {
 
 .do {
   padding-bottom: 94px;
+}
+@media screen and (max-width: 1199px) {
+  .do {
+    display: none;
+  }
 }
 
 .do-title {
@@ -531,7 +566,7 @@ input, textarea {
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: rgba(47, 48, 58, 0.8);
 }
 
