@@ -33,22 +33,13 @@
   max-width: 210px;
   max-height: 92px;
   margin: 15px;
-  // flex-basis: calc((100% - 30px) / 3);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     border-color: var(--second-basic-color);
   }
-  @include mobile {
-  }
-  @include tablet {
-    // max-width: 226px;
-  }
   @include desktop {
     max-width: 170px;
-    // & + & {
-    //   margin-left: var(--typical-gap);
-    // }
   }
 }
 

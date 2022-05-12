@@ -1,27 +1,39 @@
+.no-scroll {
+  overflow: hidden;
+}
 .header {
   border-bottom: 1px solid #ececec;
+  padding: 16px;
+  position: relative;
 }
-
-.header-nav {
-  display: flex;
+.mob-menu {
 }
-
 .header__wrap {
+  position: relative;
+  padding: 0;
   display: flex;
 }
 
 .header-page {
   padding: 0;
-  display: flex;
+  // display: flex;
+  display: none;
   align-items: center;
   margin-left: 93px;
+  @include tablet {
+    display: flex;
+  }
 }
 
 .header-contact {
   padding: 0;
-  display: flex;
+  // display: flex;
+  display: none;
   align-items: center;
   margin-left: auto;
+  @include tablet {
+    display: flex;
+  }
 }
 
 .header-page__list:not(:last-child) {
