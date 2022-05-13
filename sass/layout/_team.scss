@@ -1,9 +1,6 @@
 .team {
   background-color: #f5f4fa;
   padding: 60px 0;
-  @include mobile {
-    min-width: 320px;
-  }
   @include desktop {
     padding: 94px 0;
   }

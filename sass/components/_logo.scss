@@ -1,14 +1,18 @@
 .logo {
-    font-family: "Raleway", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    color: var(--basic-color);
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--basic-color);
+  align-items: center;
+  padding: 16px;
+  display: block;
+  @include tablet {
     display: flex;
-    align-items: center
   }
-  
-  .logo--part {
-    color: var(--second-basic-color);
-  }
+}
+
+.logo--part {
+  color: var(--second-basic-color);
+}

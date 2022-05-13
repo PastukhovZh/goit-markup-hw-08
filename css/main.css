@@ -89,6 +89,16 @@ input, textarea {
   --basic-font:"Roboto", sans-serif;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .container {
   width: 100%;
   padding-left: 15px;
@@ -97,12 +107,12 @@ input, textarea {
 }
 @media screen and (min-width: 320px) {
   .container {
-    width: 480px;
+    width: 320px;
   }
 }
 @media screen and (max-width: 319px) {
   .container {
-    width: 480px;
+    width: 320px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -123,8 +133,14 @@ input, textarea {
   font-size: 26px;
   line-height: 1.19;
   color: var(--basic-color);
-  display: flex;
   align-items: center;
+  padding: 16px;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    display: flex;
+  }
 }
 
 .logo--part {
@@ -304,42 +320,147 @@ input, textarea {
   border: transparent;
 }
 
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .no-scroll {
   overflow: hidden;
 }
 
+.menu-open-btn,
+.menu-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.menu-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-close-btn:hover .menu-icon, .menu-close-btn:focus .menu-icon {
+  fill: #2196f3;
+}
+.menu-open-btn:hover .menu-icon, .menu-open-btn:focus .menu-icon {
+  fill: #2196f3;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 30px;
+}
+.mob-menu .menu-thumb {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
+.menu-page {
+  padding: 0;
+  align-items: center;
+}
+
+.menu-page__list {
+  font-weight: var(--third-font-weight);
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+.menu-page__list + .menu-page__list {
+  margin-top: 32px;
+}
+
+.menu-page__link {
+  font-weight: var(--third-font-weight);
+  letter-spacing: 0.02em;
+  color: var(--basic-color);
+  display: flex;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-page__link:focus, .menu-page__link:hover {
+  color: var(--second-basic-color);
+}
+
+.menu-page__link--visited {
+  color: var(--second-basic-color);
+}
+
+.menu-bottom {
+  margin-top: auto;
+}
+
+.menu-contact {
+  padding: 0;
+  align-items: center;
+  margin-left: auto;
+  margin-bottom: 64px;
+}
+
+.menu-contact__tel {
+  font-weight: var(--third-font-weight);
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+  margin-bottom: 32px;
+}
+
+.menu-contact__mail {
+  font-weight: var(--third-font-weight);
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.menu-soc-list {
+  display: flex;
+}
+
+.menu-soc-link {
+  font-weight: var(--third-font-weight);
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.soc-line {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: rgba(33, 33, 33, 0.2);
+}
+
 .header {
   border-bottom: 1px solid #ececec;
-  padding: 16px;
   position: relative;
 }
 
+.header-nav {
+  display: none;
+}
+
 .header__wrap {
-  position: relative;
+  margin: 0;
   padding: 0;
-  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .header__wrap {
+    display: flex;
+  }
 }
 
 .header-page {
   padding: 0;
-  display: none;
   align-items: center;
   margin-left: 93px;
-}
-@media screen and (min-width: 768px) {
-  .header-page {
-    display: flex;
-  }
 }
 
 .header-contact {
@@ -347,11 +468,6 @@ input, textarea {
   display: none;
   align-items: center;
   margin-left: auto;
-}
-@media screen and (min-width: 768px) {
-  .header-contact {
-    display: flex;
-  }
 }
 
 .header-page__list:not(:last-child) {
@@ -632,16 +748,6 @@ input, textarea {
 .team {
   background-color: #f5f4fa;
   padding: 60px 0;
-}
-@media screen and (min-width: 320px) {
-  .team {
-    min-width: 320px;
-  }
-}
-@media screen and (max-width: 319px) {
-  .team {
-    min-width: 320px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .team {

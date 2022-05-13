@@ -21,16 +21,46 @@
                 <a href="./index.html" class="logo">
                     <span class="logo--part">Web</span>Studio
                 </a>
-                    <button class="menu-open-btn" type="button">
+                <button  type="button" class=" menu-open-btn" >
+                    <svg class="menu-icon" width="40px" height="40px">
+                        <use href="./images/icon/icons.svg#icon-menu-btn"></use>
+                    </svg>
+                </button>
+                <div class="mob-menu is-hidden ">
+                    <div class="menu-thumb">
+                        <button  type="button" class=" menu-close-btn " >
                         <svg class="menu-icon" width="40px" height="40px">
-                            <use  href="./images/icon/icons.svg#icon-menu-btn"></use>
+                            <use href="./images/icon/icons.svg#icon-close-btn"></use></button>
                         </svg>
-                    </button>
-                <div class="mob-menu">
-                    <button type="button">
-                        <svg class="menu-icon" width="40px" height="40px">
-                            <use class="menu-close-btn is-hidden" href="./images/icon/icons.svg#icon-close-btn"></use></button>
-                        </svg>
+                            <ul class="menu-page">
+                                <li class="menu-page__list">
+                                    <a class="menu-page__link menu-page__link--visited" href="./index.html">Студия </a>
+                                </li>
+                                <li class="menu-page__list"><a class="menu-page__link" href="./portfolio.html">Портфолио</a></li>
+                                <li class="menu-page__list"><a class="menu-page__link" href="">Контакты</a></li>
+                            </ul>
+                        <div class="menu-bottom">
+                            <ul class="menu-contact">
+                                <li class="menu-page__list">
+                                    <a class="menu-contact__tel" href="tel:+380961111111">
+                                        +38 096 111 11 11</a>
+                                </li>
+                                <li class="menu-page__list">
+                                    <a class="menu-contact__mail" href="mailto:info@devstudio.com">
+                                        info@devstudio.com</a>
+                                </li>
+                            </ul>
+                            <ul class="menu-soc-list">
+                                <li class="menu-soc-item"><a class="menu-soc-link" href="">Instagram</a></li>
+                                <span class="soc-line">|</span>
+                                <li class="menu-soc-item"><a class="menu-soc-link" href="">Twitter</a></li>
+                                <span class="soc-line">|</span>
+                                <li class="menu-soc-item"><a class="menu-soc-link" href="">Facebook</a></li>
+                                <span class="soc-line">|</span>
+                                <li class="menu-soc-item"><a class="menu-soc-link" href="">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <nav class="header-nav">
                     <ul class="header-page">
@@ -58,12 +88,6 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="menu">
-                <svg class="menu-icon" width="40px" height="40px">
-                    <use href="./images/icon/icons.svg#icon-menu-btn"></use>
-                    <use class="is-hidden" href="./images/icon/icons.svg#icon-close-btn"></use>
-                </svg>
-            </div> -->
         </header>
         <!-- Section-1-Hero-->
     <main>
@@ -465,6 +489,7 @@
         </div> -->
         <!---------- Script ---------->
         <script src="./js/modal.js"></script>
+        <script src="./js/menu.js"></script>
 </body>
 
 </html>
