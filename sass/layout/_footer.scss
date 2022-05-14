@@ -1,40 +1,72 @@
 .footer {
   background-color: #2f303a;
   padding: 60px 0;
+
+  // padding: 60px 0;
+}
+.footer-tablet-wrap {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+}
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    flex-direction: row;
+    @media screen and (max-width: 1199px) {
+      justify-content: space-around;
+    }
+  }
+  @include desktop {
+  }
 }
 
-
-.footer__logo{  
+.footer__logo {
+  padding-top: 0;
   letter-spacing: 0.03em;
   color: var(--third-basic-color);
 }
 
 .footer-address {
-  font-weight:var(--secondary-font-weight) ;
+  font-weight: var(--secondary-font-weight);
   font-size: 14px;
   line-height: 1.71;
   color: var(--third-basic-color);
-  margin-top: 20px;
+  margin-bottom: 60px;
+  // margin-top: 20px;
 }
-
 
 .footer-breadcrumbs {
-  margin-top: 9px;
-  padding: 0;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  align-items: center;
+  // margin-top: 9px;
+  padding: 0;
+  // display: flex;
+  // flex-direction: column
 }
 
-.footer-breadcrumbs__contact:last-child {
-  margin-top: 9px;
+.footer-breadcrumbs__contact {
+  margin-top: 8px;
 }
+
+// .footer-breadcrumbs__contact:last-child {
+//   margin-top: 9px;
+// }
 
 .footer-link {
   font-weight: var(--secondary-font-weight);
   font-size: 14px;
   line-height: 1.17;
   color: rgba(255, 255, 255, 0.6);
-
 }
 
 .footer-item__title {
@@ -48,15 +80,14 @@
 }
 
 .footer-item__list {
+  margin-bottom: 60px;
   display: flex;
-flex-grow: 1;
+  flex-grow: 1;
 }
 
-
-.footer-social+.footer-social {
+.footer-social + .footer-social {
   margin-left: 10px;
 }
-
 
 .footer-social__link {
   display: flex;
@@ -67,8 +98,8 @@ flex-grow: 1;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
+  &:hover,
+  &:focus {
     background-color: var(--second-basic-color);
   }
 }
@@ -77,44 +108,52 @@ flex-grow: 1;
   fill: var(--third-basic-color);
 }
 
-.footer-wrap {
+.footer-item {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
-}
-
-
-
-.footer-item{
-  flex-grow: 1;
-  &+& {
-  margin-left: 70px;
-}
-}
-
-.social-form{
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-left: 93px;
-
+  // flex-grow: 1;
+  @include desktop {
+    & + & {
+      margin-left: 70px;
+    }
+  }
 }
 
-.social-form__list{
-display: block;
-font-weight: var(--basic-font-weight);
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: #FFFFFF;
-margin-bottom: 20px;
+.social-form {
+  // align-items: center;
+  // margin-left: 93px;
+  width: 100%;
+  @include desktop {
+    width: auto;
+  }
 }
 
-.social-form__btn{
+.social-form__list {
   display: flex;
+  justify-content: center;
+  font-weight: var(--basic-font-weight);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-.social-form__mail{
-  width: 358px;
+.social-form__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.social-form__mail {
+  width: 100%;
+  max-width: 450px;
   height: 50px;
   padding-left: 16px;
   background-color: transparent;
@@ -122,18 +161,20 @@ margin-bottom: 20px;
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-
   font-weight: var(--secondary-font-weight);
   font-size: 16px;
   line-height: 1.25;
   display: flex;
   align-items: center;
   letter-spacing: 0.03em;
-  
   color: rgba(255, 255, 255, 0.6);
+  @include desktop {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
-.social-form__subscribe-btn{
+.social-form__subscribe-btn {
   width: 200px;
   height: 50px;
   font-weight: var(--basic-font-weight);
@@ -144,18 +185,21 @@ margin-bottom: 20px;
   justify-content: space-around;
 
   letter-spacing: 0.06em;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: var(--second-basic-color);
   padding: 10px 29px;
-  margin-left: 12px;
+  // margin-left: 12px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:focus,
-  &:hover{
-  background-color: #188ce8;
+  &:hover {
+    background-color: #188ce8;
+  }
+  margin-top: 20px;
+  @include desktop {
+    margin-top: 0;
   }
 }
 
-
-.social-form__subscribe-icon{
-fill: var(--third-basic-color);
+.social-form__subscribe-icon {
+  fill: var(--third-basic-color);
 }

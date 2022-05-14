@@ -16,6 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    // width: calc(100% / 2 - 30px);
   }
   @include desktop {
     display: flex;
@@ -25,7 +26,7 @@
 .icon-list {
   background-color: #f5f4fa;
   display: flex;
-  width: 320px;
+  // max-width: 450px;
   height: 120px;
   background-repeat: no-repeat;
   background-position: center;
@@ -42,36 +43,19 @@
 
 .text-li {
   display: block;
-  width: 320px;
+  // width: 320px;
   @include mobile {
     &:not(:last-child) {
       margin-bottom: 15px;
     }
   }
-  // @media screen and(max-width:767px) {
-  //   &:not(:last-child) {
-  //     margin-bottom: 30px;
-  //   }
-  // }
   @include tablet {
     margin: 15px;
-    width: 354px;
-    //   width: calc(100% / 2 - 30px);
-    //   width: 354px;
-    //   &:nth-child(even) {
-    //     margin-left: 30px;
-    //   }
-    //   @media screen and (max-width: 1199px) {
-    //     &:nth-child(-n + 2) {
-    //       margin-bottom: 30px;
-    //     }
-    //   }
+    max-width: 354px;
+    width: calc((100% - 60px) / 2);
   }
   @include desktop {
-    //   max-width: 270px;
-    //   & + & {
-    //     margin-left: var(--typical-gap);
-    //   }
+    width: 270px;
   }
 }
 
@@ -83,7 +67,6 @@
   text-transform: uppercase;
   margin-bottom: 10px;
   padding: 0;
-
   @include mobile {
     text-align: center;
   }
