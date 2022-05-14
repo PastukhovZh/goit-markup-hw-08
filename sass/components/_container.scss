@@ -9,10 +9,10 @@
   }
 
   @include tablet {
-    width: 768px;
+    min-width: 768px;
   }
 
   @include desktop {
-    width: 1200px;
+    max-width: 1200px;
   }
 }

@@ -1,108 +1,8 @@
-// .header {
-//   border-bottom: 1px solid #ececec;
-//   // padding: 16px;
-//   position: relative;
-// }
-// .header-nav {
-//   display: none;
-//   @include tablet {
-//     // display: flex;
-//   }
-// }
-
-// .header__wrap {
-//   // position: relative;
-//   margin: 0;
-//   padding: 0;
-//   @include tablet {
-//     // display: flex;
-//   }
-// }
-
-// .header-page {
-//   padding: 0;
-//   // display: flex;
-//   align-items: center;
-//   margin-left: 93px;
-// }
-
-// .header-contact {
-//   padding: 0;
-//   display: none;
-//   align-items: center;
-//   margin-left: auto;
-// }
-
-// .header-page__list:not(:last-child) {
-//   margin-right: 50px;
-// }
-
-// .header-page__link {
-//   position: relative;
-//   font-weight: var(--third-font-weight);
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   color: var(--basic-color);
-//   padding: 32px 0;
-//   align-items: stretch;
-//   display: flex;
-//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//   margin: -1px;
-//   &:focus,
-//   &:hover {
-//     color: var(--second-basic-color);
-//   }
-// }
-
-// .header-page__link--visited {
-//   color: var(--second-basic-color);
-//   &::after {
-//     position: absolute;
-//     bottom: 0;
-//     content: "";
-//     width: 100%;
-//     height: 4px;
-//     background-color: var(--second-basic-color);
-//     border-radius: 2px;
-//   }
-// }
-
-// .header-contact__item {
-//   font-weight: var(--third-font-weight);
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   color: #757575;
-//   align-items: center;
-//   display: flex;
-//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//   &:focus,
-//   &:hover {
-//     color: var(--second-basic-color);
-//   }
-// }
-
-// .header-contact__icon {
-//   margin-right: 10px;
-//   .header-contact__item & {
-//     fill: currentColor;
-//   }
-//   .header-contact__item:focus & {
-//     fill: currentColor;
-//   }
-
-//   .header-contact__item:hover & {
-//     fill: currentColor;
-//   }
-// }
-
 .header {
   border-bottom: 1px solid #ececec;
 }
 
 .header-nav {
-  // display: flex;
   display: none;
   @include tablet {
     display: flex;
@@ -113,13 +13,18 @@
   display: flex;
   padding: 0;
   margin: 0;
+  @media screen and (max-width: 1199px) {
+    justify-content: space-between;
+  }
 }
 
 .header-page {
   padding: 0;
   display: flex;
   align-items: center;
-  margin-left: 93px;
+  @include desktop {
+    margin-left: 93px;
+  }
 }
 
 .header-contact {
@@ -129,8 +34,15 @@
   align-items: center;
 
   @include tablet {
+    display: block;
+    margin-top: 21px;
+    margin-left: auto;
+  }
+  @include desktop {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-top: 0;
   }
 }
 
@@ -184,8 +96,23 @@
   }
 }
 
+@media screen and(max-width:1199px) {
+  .header-page__contact + .header-page__contact {
+    @include tablet {
+      margin-top: 10px;
+    }
+  }
+}
+.header-page__contact {
+  @include desktop {
+    & + & {
+      margin-left: 30px;
+    }
+  }
+}
+
 .header-contact__icon {
-  margin-right: 10px;
+  margin-right: 8px;
   .header-contact__item & {
     fill: currentColor;
   }
@@ -195,5 +122,8 @@
 
   .header-contact__item:hover & {
     fill: currentColor;
+  }
+  @include desktop {
+    margin-right: 10px;
   }
 }

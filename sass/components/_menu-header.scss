@@ -2,6 +2,12 @@
   overflow: hidden;
 }
 
+.menu {
+  @include tablet {
+    display: none;
+  }
+}
+
 .menu-open-btn,
 .menu-close-btn {
   position: absolute;
