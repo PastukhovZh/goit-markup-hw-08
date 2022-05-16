@@ -5,6 +5,18 @@
   }
 }
 
+.client-wrap {
+  @include mobile {
+    max-width: 450px;
+  }
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+
 .clients-title {
   font-weight: var(--basic-font-weight);
   font-size: 28px;

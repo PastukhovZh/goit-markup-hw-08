@@ -18,42 +18,89 @@
 
     <body>
             <!-- Header -->
-            <header class="header">
-                <div class="header__wrap container">
-                    <a href="./index.html" class="logo">
-                        <span class="logo--part">Web</span>Studio
-                    </a>
-                    <nav class="header-nav">
-                        <ul class="header-page">
-                            <li class="header-page__list">
-                                <a class="header-page__link" href="./index.html">Студия </a>
-                            </li>
-                            <li class="header-page__list"><a class="header-page__link header-page__link--visited" href="./portfolio.html">Портфолио</a></li>
-                            <li class="header-page__list"><a class="header-page__link" href="">Контакты</a></li>
-                        </ul>
-                    </nav>
-                    <ul class="header-contact">
-                        <li class="header-page__list">
-                            <a class="header-contact__item" href="mailto:info@devstudio.com"> 
-                                <svg class="header-contact__icon" width="16" height="16">
-                                    <use href="./images/icon/icons.svg#icon-mail"></use>
-                                </svg>
-                                info@devstudio.com</a>
-                        </li>
-                        <li class="header-page__list">
-                            <a class="header-contact__item" href="tel:+380961111111">
-                                <svg class="header-contact__icon" width="16" height="16">
-                                    <use href="./images/icon/icons.svg#icon-phone"></use>
-                                </svg>
-                                +38 096 111 11 11</a>
-                        </li>
-                    </ul>
-                </div>
-            </header>
+                    <header class="header">
+                        <div class="header__wrap container">
+                            <a href="./index.html" class="logo">
+                                <span class="logo--part">Web</span>Studio
+                            </a>
+                            <div class="menu">
+                                <button type="button" class=" menu-open-btn">
+                                    <svg class="menu-icon" width="40px" height="40px">
+                                        <use href="./images/icon/icons.svg#icon-menu-btn"></use>
+                                    </svg>
+                                </button>
+                                <div class="mob-menu is-hidden ">
+                                    <div class="menu-thumb">
+                                        <button type="button" class=" menu-close-btn ">
+                                            <svg class="menu-icon" width="40px" height="40px">
+                                                <use href="./images/icon/icons.svg#icon-close-btn"></use></button>
+                                        </svg>
+                                        <ul class="menu-page">
+                                            <li class="menu-page__list">
+                                                <a class="menu-page__link" href="./index.html">Студия </a>
+                                            </li>
+                                            <li class="menu-page__list">
+                                                <a class="menu-page__link" href="./portfolio.html">Портфолио</a>
+                                            </li>
+                                            <li class="menu-page__list">
+                                                <a class="menu-page__link" href="">Контакты</a>
+                                            </li>
+                                        </ul>
+                                        <div class="menu-bottom">
+                                            <ul class="menu-contact">
+                                                <li class="menu-page__list">
+                                                    <a class="menu-contact__tel" href="tel:+380961111111">
+                                                        +38 096 111 11 11</a>
+                                                </li>
+                                                <li class="menu-page__list">
+                                                    <a class="menu-contact__mail" href="mailto:info@devstudio.com">
+                                                        info@devstudio.com</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="menu-soc-list">
+                                                <li class="menu-soc-item"><a class="menu-soc-link" href="">Instagram</a></li>
+                                                <span class="soc-line">|</span>
+                                                <li class="menu-soc-item"><a class="menu-soc-link" href="">Twitter</a></li>
+                                                <span class="soc-line">|</span>
+                                                <li class="menu-soc-item"><a class="menu-soc-link" href="">Facebook</a></li>
+                                                <span class="soc-line">|</span>
+                                                <li class="menu-soc-item"><a class="menu-soc-link" href="">LinkedIn</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav class="header-nav">
+                                <ul class="header-page">
+                                    <li class="header-page__list">
+                                        <a class="header-page__link " href="./index.html">Студия </a>
+                                    </li>
+                                    <li class="header-page__list"><a class="header-page__link header-page__link--visited" href="./portfolio.html">Портфолио</a></li>
+                                    <li class="header-page__list"><a class="header-page__link" href="">Контакты</a></li>
+                                </ul>
+                            </nav>
+                            <ul class="header-contact">
+                                <li class="header-page__contact">
+                                    <a class="header-contact__item" href="mailto:info@devstudio.com">
+                                        <svg class="header-contact__icon" width="16" height="16">
+                                            <use href="./images/icon/icons.svg#icon-mail"></use>
+                                        </svg>
+                                        info@devstudio.com</a>
+                                </li>
+                                <li class="header-page__contact">
+                                    <a class="header-contact__item" href="tel:+380961111111">
+                                        <svg class="header-contact__icon" width="16" height="16">
+                                            <use href="./images/icon/icons.svg#icon-phone"></use>
+                                        </svg>
+                                        +38 096 111 11 11</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </header>
         <!-- Portfolio -->
         <main>
                 <section class="portfolio">
-                    <div class="container">
+                    <div class="container prtf-wrap">
                         <h2 class="visually-hidden">Navigation</h2>
                         <ul class="prtf-list-btn">
                             <li class="prtf-btn"><button class="nav-btn btn-prtf-now" type="button">Все</button></li>
@@ -66,7 +113,7 @@
                             <li class="prtf-list">
                                 <a href="" class="prtf-link">
                                         <div class="prtf-info">
-                                            <img src="./images/portfolio/portfolio_img1.jpg" alt="Ноутбук с портфолио" width="370" height="294">
+                                            <img src="./images/portfolio/mob/img1-450.jpg" alt="Ноутбук с портфолио" width="370" height="294">
                                             <div class="prtf-info-overlay">
                                                 <p class="prtf-info-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                                                 посетителю получить
@@ -82,7 +129,7 @@
                             <li class="prtf-list">
                                 <a href="" class="prtf-link">
                                     <div class="prtf-info">
-                                        <img src="./images/portfolio/portfolio_img2.jpg" alt="Баскетбол." width="370" height="294">
+                                        <img src="./images/portfolio/mob/img1-450.jpg" alt="Баскетбол." width="370" height="294">
                                         <div class="prtf-info-overlay">
                                             <p class="prtf-info-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae impedit autem quasi, voluptas tempore eos fugit optio esse officiis labore quos, excepturi, veniam incidunt hic laudantium nostrum temporibus velit maiores.</p>
                                         </div>
@@ -96,7 +143,7 @@
                             <li class="prtf-list">
                                 <a href="" class="prtf-link">
                                     <div class="prtf-info">
-                                        <img src="./images/portfolio/portfolio_img3.jpg" alt="Ресторан рыбной еды" width="370" height="294">
+                                        <img src="./images/portfolio/mob/img1-450.jpg" alt="Ресторан рыбной еды" width="370" height="294">
                                         <div class="prtf-info-overlay">
                                             <p class="prtf-info-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae impedit autem quasi, voluptas tempore eos fugit optio esse officiis labore quos, excepturi, veniam incidunt hic laudantium nostrum temporibus velit maiores.</p>
                                         </div>
@@ -110,7 +157,7 @@
                             <li class="prtf-list">
                                 <a href="" class="prtf-link">
                                     <div class="prtf-info">
-                                        <img src="./images/portfolio/portfolio_img4.jpg" alt="Наушники" width="370" height="294">
+                                        <img src="./images/portfolio/mob/img1-450.jpg" alt="Наушники" width="370" height="294">
                                         <div class="prtf-info-overlay">
                                             <p class="prtf-info-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae impedit autem quasi, voluptas tempore eos fugit optio esse officiis labore quos, excepturi, veniam incidunt hic laudantium nostrum temporibus velit maiores.</p>
                                         </div>
@@ -124,7 +171,7 @@
                             <li class="prtf-list">
                                 <a href="" class="prtf-link">
                                     <div class="prtf-info">
-                                        <img src="./images/portfolio/portfolio_img5.jpg" alt="Белая и коричневая коробка" width="370" height="294">
+                                        <img src="./images/portfolio/mob/img1-450.jpg" alt="Белая и коричневая коробка" width="370" height="294">
                                         <div class="prtf-info-overlay">
                                             <p class="prtf-info-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae impedit autem quasi, voluptas tempore eos fugit optio esse officiis labore quos, excepturi, veniam incidunt hic laudantium nostrum temporibus velit maiores.</p>
                                         </div>
@@ -138,7 +185,7 @@
                             <li class="prtf-list">
                                 <a href="" class="prtf-link">
                                     <div class="prtf-info">
-                                        <img src="./images/portfolio/portfolio_img6.jpg" alt="Монитор с темным сайтом" width="370" height="294">
+                                        <img src="./images/portfolio/mob/img1-450.jpg" alt="Монитор с темным сайтом" width="370" height="294">
                                         <div class="prtf-info-overlay">
                                             <p class="prtf-info-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae impedit autem quasi, voluptas tempore eos fugit optio esse officiis labore quos, excepturi, veniam incidunt hic laudantium nostrum temporibus velit maiores.</p>
                                         </div>
@@ -152,7 +199,7 @@
                             <li class="prtf-list">
                                 <a href="" class="prtf-link">
                                     <div class="prtf-info">
-                                        <img src="./images/portfolio/portfolio_img7.jpg" alt="Бирка с названием" width="370" height="294">
+                                        <img src="./images/portfolio/mob/img1-450.jpg" alt="Бирка с названием" width="370" height="294">
                                         <div class="prtf-info-overlay">
                                             <p class="prtf-info-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae impedit autem quasi, voluptas tempore eos fugit optio esse officiis labore quos, excepturi, veniam incidunt hic laudantium nostrum temporibus velit maiores.</p>
                                         </div>
@@ -166,7 +213,7 @@
                             <li class="prtf-list">
                                 <a href="" class="prtf-link">
                                     <div class="prtf-info">
-                                        <img src="./images/portfolio/portfolio_img8.jpg" alt="Рабочий ноутбук с сайтом" width="370" height="294">
+                                        <img src="./images/portfolio/mob/img1-450.jpg" alt="Рабочий ноутбук с сайтом" width="370" height="294">
                                         <div class="prtf-info-overlay">
                                             <p class="prtf-info-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae impedit autem quasi, voluptas tempore eos fugit optio esse officiis labore quos, excepturi, veniam incidunt hic laudantium nostrum temporibus velit maiores.</p>
                                         </div>
@@ -180,7 +227,7 @@
                             <li class="prtf-list">
                                 <a href="" class="prtf-link">
                                     <div class="prtf-info">
-                                        <img src="./images/portfolio/portfolio_img9.jpg" alt="Книга лимитированная версия" width="370" height="294">
+                                        <img src="./images/portfolio/mob/img1-450.jpg" alt="Книга лимитированная версия" width="370" height="294">
                                         <div class="prtf-info-overlay">
                                             <p class="prtf-info-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae impedit autem quasi, voluptas tempore eos fugit optio esse officiis labore quos, excepturi, veniam incidunt hic laudantium nostrum temporibus velit maiores.</p>
                                         </div>
@@ -198,62 +245,66 @@
 <!-- Footer -->
         <footer class="footer">
             <div class="container footer-wrap">
-                <div class="footer-item">
+                <div class=" footer-tablet-wrap ">
+                    <div class="footer-item">
                         <a class="logo footer__logo" href="">
-                        <span class="logo--part">Web</span>Studio
-                    </a>
-                    <address class="footer-address">
-                        г. Киев, пр-т Леси Украинки, 26
-                        <ul class="footer-breadcrumbs">
-                            <li class="footer-breadcrumbs__contact"><a class="footer-link" href="mailto:info@example.com">info@example.com</a></li>
-                            <li class="footer-breadcrumbs__contact"><a class="footer-link" href="tel:+380991111111">+38 099 111 11 11</a></li>
+                            <span class="logo--part">Web</span>Studio
+                        </a>
+                        <address class="footer-address">
+                            г. Киев, пр-т Леси Украинки, 26
+                            <ul class="footer-breadcrumbs">
+                                <li class="footer-breadcrumbs__contact"><a class="footer-link"
+                                        href="mailto:info@example.com">info@example.com</a></li>
+                                <li class="footer-breadcrumbs__contact"><a class="footer-link" href="tel:+380991111111">+38 099
+                                        111 11 11</a></li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="footer-item">
+                        <h3 class="footer-item__title">присоединяйтесь</h3>
+                        <ul class="footer-item__list">
+                            <li class="footer-social">
+                                <a href="" class="footer-social__link">
+                                    <svg class="footer-social__icon" width="20" height="20">
+                                        <use href="./images/icon/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-social">
+                                <a href="" class="footer-social__link">
+                                    <svg class="footer-social__icon" width="20" height="20">
+                                        <use href="./images/icon/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-social">
+                                <a href="" class="footer-social__link">
+                                    <svg class="footer-social__icon" width="20" height="20">
+                                        <use href="./images/icon/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-social">
+                                <a href="" class="footer-social__link">
+                                    <svg class="footer-social__icon" width="20" height="20">
+                                        <use href="./images/icon/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
-                    </address>
+                    </div>
                 </div>
-                <div class="footer-item">
-                    <h3 class="footer-item__title">присоединяйтесь</h3>
-                    <ul class="footer-item__list">
-                        <li class="footer-social">
-                            <a href="" class="footer-social__link">
-                                <svg class="footer-social__icon" width="20" height="20">
-                                    <use href="./images/icon/icons.svg#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social">
-                            <a href="" class="footer-social__link">
-                                <svg class="footer-social__icon" width="20" height="20">
-                                    <use href="./images/icon/icons.svg#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social">
-                            <a href="" class="footer-social__link">
-                                <svg class="footer-social__icon" width="20" height="20">
-                                    <use href="./images/icon/icons.svg#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social">
-                            <a href="" class="footer-social__link">
-                                <svg class="footer-social__icon" width="20" height="20">
-                                    <use href="./images/icon/icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                    <form class="social-form">
-                        <label class="social-form__list" for="subscribe">Подпишитесь на рассылку</label>
-                        <div class="social-form__btn">
-                            <input class="social-form__mail" type="text" id="subscribe" name="mail" placeholder="E-mail">
-                            <button class="social-form__subscribe-btn" type="button">Подпишись
-                                <svg class="social-form__subscribe-icon" width="24" height="24">
-                                    <use href="./images/icon/icons.svg#icon-telegram"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </form>    
+                <form class="social-form">
+                    <label class="social-form__list" for="subscribe">Подпишитесь на рассылку</label>
+                    <div class="social-form__btn">
+                        <input class="social-form__mail" type="text" id="subscribe" name="mail" placeholder="E-mail">
+                        <button class="social-form__subscribe-btn" type="button">Подпишись
+                            <svg class="social-form__subscribe-icon" width="24" height="24">
+                                <use href="./images/icon/icons.svg#icon-telegram"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
             </div>
         </footer>
     </body>

@@ -5,6 +5,18 @@
   }
 }
 
+.benefits {
+  @include mobile {
+    max-width: 450px;
+  }
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+
 .text-list {
   @include mobile {
     &:not(:last-child) {
@@ -14,9 +26,9 @@
   @include tablet {
     margin: -15px;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    // width: calc(100% / 2 - 30px);
   }
   @include desktop {
     display: flex;

@@ -7,25 +7,34 @@
 .footer-tablet-wrap {
   @include tablet {
     display: flex;
-    flex-wrap: wrap;
+    @media screen and(max-width:1199px) {
+      justify-content: space-around;
+      width: 100%;
+    }
   }
-
   @include desktop {
     flex-wrap: nowrap;
+    align-items: flex-end;
   }
 }
 .footer-wrap {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   @include tablet {
-    flex-direction: row;
     @media screen and (max-width: 1199px) {
-      justify-content: space-around;
+      // justify-content: space-around;
+      // flex-direction: row;
+      flex-wrap: wrap;
     }
   }
   @include desktop {
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
 }
 
@@ -122,11 +131,11 @@
 }
 
 .social-form {
-  // align-items: center;
-  // margin-left: 93px;
   width: 100%;
   @include desktop {
     width: auto;
+    margin-left: 93px;
+    align-items: center;
   }
 }
 
