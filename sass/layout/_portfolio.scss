@@ -4,6 +4,15 @@
   padding: 60px 0;
 }
 .prtf-wrap {
+  @include mobile {
+    max-width: 480px;
+  }
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
 }
 
 .nav-btn {
@@ -39,9 +48,15 @@
 }
 
 .prtf-item {
-  // display: flex;
-  // flex-wrap: wrap;
-  // padding: 0;
+  @include tablet {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  //
+  //
+  //
 }
 
 .prtf-item-name {
@@ -64,6 +79,18 @@
 
 .prtf-list {
   padding: 0;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: var(--typical-gap);
+    }
+  }
+  @include tablet {
+    margin: 15px;
+    width: 354px;
+  }
+  @include desktop {
+    width: 370px;
+  }
   // display: flex;
   //   // margin-bottom: var(--typical-gap);
   //   // flex-basis: calc(100% / 3 - 30px);
@@ -127,8 +154,12 @@
 
 .prtf-list-btn {
   display: flex;
-  padding: 0;
-  margin-right: 0;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  @include tablet {
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 }

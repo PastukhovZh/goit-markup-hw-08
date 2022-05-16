@@ -152,7 +152,6 @@ input, textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
   }
 }
 
@@ -357,9 +356,6 @@ input, textarea {
 }
 
 .checkbox-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -367,12 +363,13 @@ input, textarea {
   color: #757575;
 }
 .checkbox-text::before {
+  display: inline-block;
   content: "";
   width: 16px;
   height: 15px;
   border: 2px solid #303030;
   border-radius: 3px;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 .checkbox-input:checked + .checkbox-text::before {
   background-color: var(--second-basic-color);
@@ -721,12 +718,12 @@ input, textarea {
 
 @media screen and (min-width: 320px) {
   .benefits {
-    max-width: 450px;
+    max-width: 480px;
   }
 }
 @media screen and (max-width: 319px) {
   .benefits {
-    max-width: 450px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -902,12 +899,12 @@ input, textarea {
 
 @media screen and (min-width: 320px) {
   .team-wrap {
-    max-width: 450px;
+    max-width: 480px;
   }
 }
 @media screen and (max-width: 319px) {
   .team-wrap {
-    max-width: 450px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1043,12 +1040,12 @@ input, textarea {
 
 @media screen and (min-width: 320px) {
   .client-wrap {
-    max-width: 450px;
+    max-width: 480px;
   }
 }
 @media screen and (max-width: 319px) {
   .client-wrap {
-    max-width: 450px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1348,6 +1345,27 @@ input, textarea {
   padding: 60px 0;
 }
 
+@media screen and (min-width: 320px) {
+  .prtf-wrap {
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 319px) {
+  .prtf-wrap {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .prtf-wrap {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .prtf-wrap {
+    max-width: 1200px;
+  }
+}
+
 .nav-btn {
   font-weight: var(--third-font-weight);
   font-size: 16px;
@@ -1376,6 +1394,15 @@ input, textarea {
   background-color: var(--second-basic-color);
 }
 
+@media screen and (min-width: 768px) {
+  .prtf-item {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
+
 .prtf-item-name {
   font-weight: var(--basic-font-weight);
   font-size: 18px;
@@ -1396,6 +1423,22 @@ input, textarea {
 
 .prtf-list {
   padding: 0;
+}
+@media screen and (max-width: 767px) {
+  .prtf-list:not(:last-child) {
+    margin-bottom: var(--typical-gap);
+  }
+}
+@media screen and (min-width: 768px) {
+  .prtf-list {
+    margin: 15px;
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .prtf-list {
+    width: 370px;
+  }
 }
 
 .prtf-link {
@@ -1446,8 +1489,14 @@ input, textarea {
 
 .prtf-list-btn {
   display: flex;
-  padding: 0;
-  margin-right: 0;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .prtf-list-btn {
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=main.css.map */
