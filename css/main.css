@@ -1394,6 +1394,11 @@ input, textarea {
   margin: 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 767px) {
+  .nav-btn {
+    margin-bottom: 15px;
+  }
+}
 
 .prtf-btn :focus,
 .prtf-btn :hover {
@@ -1444,6 +1449,9 @@ input, textarea {
 @media screen and (max-width: 767px) {
   .prtf-list:not(:last-child) {
     margin-bottom: var(--typical-gap);
+  }
+  .prtf-list:nth-child(1) {
+    margin-top: 40px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1508,6 +1516,11 @@ input, textarea {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .prtf-list-btn {
+    margin-bottom: -15px;
+  }
 }
 @media screen and (min-width: 768px) {
   .prtf-list-btn {

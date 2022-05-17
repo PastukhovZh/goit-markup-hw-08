@@ -28,6 +28,9 @@
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and(max-width:767px) {
+    margin-bottom: 15px;
+  }
 }
 
 .prtf-btn :focus,
@@ -82,6 +85,9 @@
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: var(--typical-gap);
+    }
+    &:nth-child(1) {
+      margin-top: 40px;
     }
   }
   @include tablet {
@@ -156,6 +162,9 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  @media screen and(max-width:767px) {
+    margin-bottom: -15px;
+  }
   @include tablet {
     padding: 0;
     margin-right: 0;
