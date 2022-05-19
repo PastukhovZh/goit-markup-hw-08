@@ -696,6 +696,7 @@ input, textarea {
   background-color: #2f303a;
   padding: 118px 0;
   margin: 0 auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 @media screen and (min-width: 320px) {
   .hero {
