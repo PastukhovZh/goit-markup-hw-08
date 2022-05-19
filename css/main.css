@@ -1271,8 +1271,12 @@ input, textarea {
 .footer-breadcrumbs {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 0;
+}
+@media screen and (max-width: 1199px) {
+  .footer-breadcrumbs {
+    align-items: center;
+  }
 }
 
 .footer-breadcrumbs__contact {
