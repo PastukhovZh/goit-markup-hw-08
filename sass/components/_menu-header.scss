@@ -109,11 +109,7 @@
 }
 .menu-soc-list {
   display: flex;
-  @media screen and (max-width: 479px) {
-    // display: flex;
-    flex-wrap: wrap;
-    max-width: 320px;
-  }
+
   @media screen and (max-width: 767px) {
     flex-wrap: wrap;
   }
@@ -132,6 +128,9 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
+  @media screen and (max-width: 479px) {
+    font-size: 12px;
+  }
 }
 .soc-line {
   margin-left: 10px;

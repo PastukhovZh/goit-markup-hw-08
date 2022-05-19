@@ -122,9 +122,12 @@
 .footer-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
   // flex-grow: 1;
+  @media screen and (max-width: 1199px) {
+    // justify-content: center;
+    align-items: center;
+  }
   @include desktop {
     & + & {
       margin-left: 70px;
@@ -143,7 +146,6 @@
 
 .social-form__list {
   display: flex;
-  justify-content: center;
   font-weight: var(--basic-font-weight);
   font-size: 14px;
   line-height: 1.14;
@@ -151,6 +153,9 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+  }
 }
 
 .social-form__btn {
