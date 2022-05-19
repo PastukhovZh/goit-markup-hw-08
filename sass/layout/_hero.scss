@@ -3,22 +3,24 @@
   background-color: #2f303a;
   padding: 118px 0;
   margin: 0 auto;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(/images/hero/hero-bg-mob.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  @include mobile {
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("/images/hero/hero-bg-mob-x2.jpg");
+      url(/images/hero/hero-bg-mob.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("/images/hero/hero-bg-mob-x2.jpg");
+    }
   }
   @include tablet {
     min-width: 768px;
