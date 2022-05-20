@@ -5,11 +5,11 @@
   margin: 0 auto;
 
   @include mobile {
-    min-width: 320px;
+    max-width: 480px;
   }
 
   @include tablet {
-    min-width: 768px;
+    max-width: 768px;
   }
 
   @include desktop {

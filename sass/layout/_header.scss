@@ -1,5 +1,12 @@
 .header {
   border-bottom: 1px solid #ececec;
+  position: relative;
+  // @include mobile {
+  //   max-width: 320px;
+  // }
+  // @include tablet {
+  //   max-width: 768px;
+  // }
 }
 
 .header-nav {

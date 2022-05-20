@@ -107,17 +107,17 @@ input, textarea {
 }
 @media screen and (min-width: 320px) {
   .container {
-    min-width: 320px;
+    max-width: 480px;
   }
 }
 @media screen and (max-width: 319px) {
   .container {
-    min-width: 320px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    min-width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -560,6 +560,7 @@ input, textarea {
 
 .header {
   border-bottom: 1px solid #ececec;
+  position: relative;
 }
 
 .header-nav {
@@ -1251,7 +1252,7 @@ input, textarea {
 }
 
 .footer__logo {
-  padding-top: 0;
+  padding: 0 0 20px 0;
   letter-spacing: 0.03em;
   color: var(--third-basic-color);
 }
@@ -1441,6 +1442,11 @@ input, textarea {
 .portfolio {
   padding: 60px 0;
 }
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding: 94px 0;
+  }
+}
 
 @media screen and (min-width: 320px) {
   .prtf-wrap {
@@ -1552,6 +1558,13 @@ input, textarea {
 .prtf-link:hover, .prtf-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+@media screen and (min-width: 768px) {
+  .prtf-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
 
 .prtf-info {
   position: relative;
@@ -1603,12 +1616,12 @@ input, textarea {
   border-bottom: 1px solid #eeeeee;
   padding: 20px 24px 20px 24px;
 }
-
-@media screen and (max-width: 1199px) {
-  .prtf-list:first-child .border-prtf {
-    padding-bottom: 56px;
+@media screen and (min-width: 768px) {
+  .border-prtf {
+    flex-grow: 1;
   }
 }
+
 .prtf-list-btn {
   display: flex;
   flex-wrap: wrap;
@@ -1626,4 +1639,8 @@ input, textarea {
     margin-bottom: 50px;
     justify-content: center;
   }
+}
+
+.one {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */
